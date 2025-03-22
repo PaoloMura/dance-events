@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Dance Events
+
+A single page React.js website for listing dance classes and socials.
+
+## Workflow
+
+Make changes on the `dev` branch.
+
+Merge into `main`. This triggers deployment to the GitHub Pages site, available at https://paolomura.github.io/dance-events/
+
+## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -80,12 +80,145 @@
     "stars": 3
   },
   {
-    "name": "The Three Musketeers",
+    "name": "Bachata Musketeers",
     "location": "Soho, London",
     "website": "https://www.instagram.com/bachata_musketeers/",
     "days": ["Sunday"],
     "styles": ["bachata"],
     "types": ["classes", "social"],
     "stars": 3
+  },
+  {
+    "name": "Kizomba Moments",
+    "location": "High Wycombe",
+    "website": "https://kizombamoments.dance/",
+    "days": ["Tuesday"],
+    "styles": ["kizomba"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Salsa Calientita",
+    "location": "Slough",
+    "days": ["Monday"],
+    "styles": ["salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Salsa4Fun (Super Mario)",
+    "location": "Soho, London",
+    "days": ["Monday"],
+    "styles": ["salsa"],
+    "types": ["classes", "social"],
+    "notes": "highly recommended"
+  },
+  {
+    "name": "Salsa4Fun (Super Mario)",
+    "location": "Camden Town, London",
+    "days": ["Saturday"],
+    "styles": ["salsa"],
+    "types": ["social"]
+  },
+  {
+    "name": "Salsa Tropical",
+    "location": "London LSE university",
+    "days": ["Monday", "Wednesday"],
+    "styles": ["salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Salsa Tropical",
+    "location": "London LSE university",
+    "days": ["Tuesday", "Thursday"],
+    "styles": ["bachata"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Cumbaye Dance",
+    "location": "London",
+    "days": ["Saturday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Cumbaye Dance",
+    "location": "London",
+    "days": ["Saturday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Salsa Mish",
+    "location": "St Albans",
+    "days": ["Friday"],
+    "styles": ["salsa", "bachata", "kizomba"],
+    "types": ["classes", "social"],
+    "notes": "highly recommended"
+  },
+  {
+    "name": "Salsa Machine",
+    "location": "Hemel Hempstead",
+    "days": ["Wednesday"],
+    "styles": ["salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Dance2Salsa (Basil)",
+    "location": "Hazelmere",
+    "days": ["Tuesday"]
+  },
+  {
+    "name": "Latin Collective",
+    "location": "London",
+    "days": ["Sunday"]
+  },
+  {
+    "name": "Incognito Dance",
+    "days": ["Saturday"],
+    "styles": ["salsa"],
+    "types": ["classes"]
+  },
+  {
+    "name": "BOS Bachata on Saturdays",
+    "location": "London",
+    "days": ["Saturday"],
+    "styles": ["bachata"],
+    "types": ["classes", "social"],
+    "notes": "mentioned many times, likely packed"
+  },
+  {
+    "name": "LLB Mambo City",
+    "location": "Chelsea, London",
+    "days": ["Friday", "Saturday"],
+    "website": "https://mambocity.co.uk/monthly-events/",
+    "styles": ["salsa", "bachata"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Kizomba Fervura",
+    "location": "Maidenhead",
+    "website": "https://www.facebook.com/p/Kizomba-Fervura-100092530153079/"
+  },
+  {
+    "name": "Pura Nights",
+    "location": "Ealing, London",
+    "days": ["Monday", "Tuesday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["classes"]
+  },
+  {
+    "name": "Salsa in the Park",
+    "location": "Hyde Park, London",
+    "days": ["Sunday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["social"]
+  },
+  {
+    "location": "Coyote Ugly, London"
+  },
+  {
+    "name": "Salsa Bachata Social Club",
+    "location": "Reading",
+    "days": ["Friday"],
+    "styles": ["salsa", "bachata"]
   }
 ]

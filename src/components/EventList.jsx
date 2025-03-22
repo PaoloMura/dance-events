@@ -22,11 +22,18 @@ export default function EventList({ days, style, type, rating }) {
   const filteredEvents = events
     .filter(
       (event) =>
-        days.length === 0 || event.days.some((day) => days.includes(day))
+        days.length === 0 ||
+        (event.days && event.days.some((day) => days.includes(day)))
     )
-    .filter((event) => style === "" || event.styles.includes(style))
-    .filter((event) => type === "" || event.types.includes(type))
-    .filter((event) => rating === null || event.stars >= rating);
+    .filter(
+      (event) => style === "" || (event.styles && event.styles.includes(style))
+    )
+    .filter(
+      (event) => type === "" || (event.types && event.types.includes(type))
+    )
+    .filter(
+      (event) => rating === null || (event.stars && event.stars >= rating)
+    );
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
@@ -36,14 +43,16 @@ export default function EventList({ days, style, type, rating }) {
             <List>
               <ListItem
                 secondaryAction={
-                  <IconButton
-                    edge="end"
-                    aria-label="website"
-                    href={event?.website}
-                    target="_blank"
-                  >
-                    <OpenInNewIcon />
-                  </IconButton>
+                  event.website && (
+                    <IconButton
+                      edge="end"
+                      aria-label="website"
+                      href={event?.website}
+                      target="_blank"
+                    >
+                      <OpenInNewIcon />
+                    </IconButton>
+                  )
                 }
               >
                 <ListItemAvatar>
@@ -52,16 +61,18 @@ export default function EventList({ days, style, type, rating }) {
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
-                  primary={event?.name}
-                  secondary={event?.location}
+                  primary={event.name || "Unknown"}
+                  secondary={event.location || undefined}
                 />
               </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <CalendarMonthIcon />
-                </ListItemIcon>
-                <ListItemText>{event.days.join(", ")}</ListItemText>
-              </ListItem>
+              {event.days?.length && (
+                <ListItem>
+                  <ListItemIcon>
+                    <CalendarMonthIcon />
+                  </ListItemIcon>
+                  <ListItemText>{event.days.join(", ")}</ListItemText>
+                </ListItem>
+              )}
               {event.stars && (
                 <ListItem>
                   <Rating readOnly value={event.stars} />
@@ -76,10 +87,10 @@ export default function EventList({ days, style, type, rating }) {
                     paddingBottom: "8px",
                   }}
                 >
-                  {event?.styles.map((style, index) => (
+                  {event.styles?.map((style, index) => (
                     <Chip key={index} label={style} color={style} />
                   ))}
-                  {event?.types.map((type, index) => (
+                  {event.types?.map((type, index) => (
                     <Chip key={index} label={type} color={type} />
                   ))}
                 </div>

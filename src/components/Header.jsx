@@ -85,9 +85,9 @@ export default function Header({
               onChange={handleChangeStyle}
             >
               <MenuItem value="">Any</MenuItem>
-              <MenuItem value="Salsa">Salsa</MenuItem>
-              <MenuItem value="Bachata">Bachata</MenuItem>
-              <MenuItem value="Kizomba">Kizomba</MenuItem>
+              <MenuItem value="salsa">Salsa</MenuItem>
+              <MenuItem value="bachata">Bachata</MenuItem>
+              <MenuItem value="kizomba">Kizomba</MenuItem>
             </Select>
           </FormControl>
 

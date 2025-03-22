@@ -8,7 +8,7 @@ function App() {
   const [days, setDays] = React.useState([]);
   const [style, setStyle] = React.useState("");
   const [type, setType] = React.useState("");
-  const [rating, setRating] = React.useState(null);
+  const [rating, setRating] = React.useState(0);
 
   return (
     <ThemeProvider theme={theme}>

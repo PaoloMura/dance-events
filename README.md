@@ -4,9 +4,9 @@ A single page React.js website for listing dance classes and socials.
 
 ## Workflow
 
-Make changes on the `dev` branch.
+Make changes on the `main` branch.
 
-Merge into `main`. This triggers deployment to the GitHub Pages site, available at https://paolomura.github.io/dance-events/
+Use `npm run deploy` to deploy changes. This builds the app on the `gh-pages` branch and makes the page available at https://paolomura.github.io/dance-events/
 
 ## Create React App
 

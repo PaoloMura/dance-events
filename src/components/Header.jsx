@@ -28,6 +28,8 @@ export default function Header({
   setStyle,
   type,
   setType,
+  rating,
+  setRating,
 }) {
   const handleChangeDays = (event) => {
     const selectedDays = event.target.value;
@@ -42,6 +44,10 @@ export default function Header({
 
   const handleChangeType = (event) => {
     setType(event.target.value);
+  };
+
+  const handleChangeRating = (event) => {
+    setRating(event.target.value);
   };
 
   return (
@@ -97,6 +103,24 @@ export default function Header({
               <MenuItem value="">Any</MenuItem>
               <MenuItem value="classes">classes</MenuItem>
               <MenuItem value="social">social</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="rating-label">Rating</InputLabel>
+            <Select
+              labelId="rating-label"
+              id="rating-select"
+              value={rating}
+              label="Rating"
+              onChange={handleChangeRating}
+            >
+              <MenuItem value={null}>Any</MenuItem>
+              <MenuItem value={1}>1</MenuItem>
+              <MenuItem value={2}>2</MenuItem>
+              <MenuItem value={3}>3</MenuItem>
+              <MenuItem value={4}>4</MenuItem>
+              <MenuItem value={5}>5</MenuItem>
             </Select>
           </FormControl>
         </Toolbar>

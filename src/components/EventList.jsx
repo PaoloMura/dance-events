@@ -18,14 +18,15 @@ import PlaceIcon from "@mui/icons-material/Place";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-export default function EventList({ days, style, type }) {
+export default function EventList({ days, style, type, rating }) {
   const filteredEvents = events
     .filter(
       (event) =>
         days.length === 0 || event.days.some((day) => days.includes(day))
     )
     .filter((event) => style === "" || event.styles.includes(style))
-    .filter((event) => type === "" || event.types.includes(type));
+    .filter((event) => type === "" || event.types.includes(type))
+    .filter((event) => rating === null || event.stars >= rating);
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
@@ -61,9 +62,11 @@ export default function EventList({ days, style, type }) {
                 </ListItemIcon>
                 <ListItemText>{event.days.join(", ")}</ListItemText>
               </ListItem>
-              <ListItem>
-                <Rating readOnly value={event.stars} />
-              </ListItem>
+              {event.stars && (
+                <ListItem>
+                  <Rating readOnly value={event.stars} />
+                </ListItem>
+              )}
               <ListItem>
                 <div
                   style={{

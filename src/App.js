@@ -8,6 +8,7 @@ function App() {
   const [days, setDays] = React.useState([]);
   const [style, setStyle] = React.useState("");
   const [type, setType] = React.useState("");
+  const [rating, setRating] = React.useState(null);
 
   return (
     <ThemeProvider theme={theme}>
@@ -18,8 +19,10 @@ function App() {
         setStyle={setStyle}
         type={type}
         setType={setType}
+        rating={rating}
+        setRating={setRating}
       />
-      <EventList days={days} style={style} type={type} />
+      <EventList days={days} style={style} type={type} rating={rating} />
     </ThemeProvider>
   );
 }

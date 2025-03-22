@@ -21,7 +21,14 @@ const allDays = [
   "Sunday",
 ];
 
-export default function Header({ days, setDays, style, setStyle }) {
+export default function Header({
+  days,
+  setDays,
+  style,
+  setStyle,
+  type,
+  setType,
+}) {
   const handleChangeDays = (event) => {
     const selectedDays = event.target.value;
     const selectDaysList =
@@ -31,6 +38,10 @@ export default function Header({ days, setDays, style, setStyle }) {
 
   const handleChangeStyle = (event) => {
     setStyle(event.target.value);
+  };
+
+  const handleChangeType = (event) => {
+    setType(event.target.value);
   };
 
   return (
@@ -71,6 +82,21 @@ export default function Header({ days, setDays, style, setStyle }) {
               <MenuItem value="Salsa">Salsa</MenuItem>
               <MenuItem value="Bachata">Bachata</MenuItem>
               <MenuItem value="Kizomba">Kizomba</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="type-label">Type</InputLabel>
+            <Select
+              labelId="type-label"
+              id="type-select"
+              value={type}
+              label="Type"
+              onChange={handleChangeType}
+            >
+              <MenuItem value="">Any</MenuItem>
+              <MenuItem value="classes">classes</MenuItem>
+              <MenuItem value="social">social</MenuItem>
             </Select>
           </FormControl>
         </Toolbar>

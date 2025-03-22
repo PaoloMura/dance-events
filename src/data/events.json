@@ -5,7 +5,8 @@
     "website": "https://www.latinshine.co.uk/",
     "days": ["Tuesday"],
     "styles": ["salsa"],
-    "types": ["classes"]
+    "types": ["classes"],
+    "stars": 5
   },
   {
     "name": "Latin Shine",
@@ -13,7 +14,8 @@
     "website": "https://www.latinshine.co.uk/",
     "days": ["Wednesday"],
     "styles": ["bachata"],
-    "types": ["classes"]
+    "types": ["classes"],
+    "stars": 5
   },
   {
     "name": "SalsaStyle (Norman)",
@@ -21,10 +23,11 @@
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Monday"],
     "styles": ["salsa"],
-    "types": ["classes", "social"]
+    "types": ["classes", "social"],
+    "stars": 3
   },
   {
-    "name": "SalsaStyle (Norman)",
+    "name": "SalsaStyle (Kyle)",
     "location": "Maidenhead",
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Thursday"],
@@ -33,11 +36,12 @@
   },
   {
     "name": "SalsaStyle (Norman)",
-    "location": "Marlow",
+    "location": "Maidenhead",
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Friday"],
     "styles": ["salsa"],
-    "types": ["classes", "social"]
+    "types": ["classes", "social"],
+    "stars": 3
   },
   {
     "name": "Pexava Dance (Gill)",
@@ -45,7 +49,8 @@
     "website": "https://www.pexava.com/",
     "days": ["Tuesday"],
     "styles": ["salsa"],
-    "types": ["classes", "social"]
+    "types": ["classes", "social"],
+    "stars": 5
   },
   {
     "name": "A2B Bachata (Ash y Leni)",
@@ -53,7 +58,8 @@
     "website": "https://www.instagram.com/a2b_dance_academy/",
     "days": ["Tuesday", "Wednesday", "Thursday"],
     "styles": ["bachata"],
-    "types": ["classes"]
+    "types": ["classes"],
+    "stars": 5
   },
   {
     "name": "Salsa in Aylesbury",
@@ -61,7 +67,8 @@
     "website": "https://www.salsainaylesbury.co.uk/",
     "days": ["Thursday"],
     "styles": ["salsa"],
-    "types": ["classes", "social"]
+    "types": ["classes", "social"],
+    "stars": 3
   },
   {
     "name": "The Funky Latino",
@@ -69,6 +76,16 @@
     "website": "https://thefunkylatino.com/",
     "days": ["Saturday"],
     "styles": ["salsa", "bachata"],
-    "types": ["classes", "social"]
+    "types": ["classes", "social"],
+    "stars": 3
+  },
+  {
+    "name": "The Three Musketeers",
+    "location": "Soho, London",
+    "website": "https://www.instagram.com/bachata_musketeers/",
+    "days": ["Sunday"],
+    "styles": ["bachata"],
+    "types": ["classes", "social"],
+    "stars": 3
   }
 ]

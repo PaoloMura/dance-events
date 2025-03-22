@@ -11,6 +11,7 @@ import {
   ListItemAvatar,
   ListItemIcon,
   ListItemText,
+  Rating,
   Stack,
 } from "@mui/material";
 import PlaceIcon from "@mui/icons-material/Place";
@@ -61,7 +62,17 @@ export default function EventList({ days, style, type }) {
                 <ListItemText>{event.days.join(", ")}</ListItemText>
               </ListItem>
               <ListItem>
-                <div style={{ display: "flex", gap: "0.5rem" }}>
+                <Rating readOnly value={event.stars} />
+              </ListItem>
+              <ListItem>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "4px",
+                    overflow: "scroll",
+                    paddingBottom: "8px",
+                  }}
+                >
                   {event?.styles.map((style, index) => (
                     <Chip key={index} label={style} color={style} />
                   ))}

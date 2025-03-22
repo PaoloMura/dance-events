@@ -32,7 +32,7 @@ export default function EventList({ days, style, type, rating }) {
       (event) => type === "" || (event.types && event.types.includes(type))
     )
     .filter(
-      (event) => rating === null || (event.stars && event.stars >= rating)
+      (event) => rating === "" || (event.stars && event.stars >= rating)
     );
 
   return (

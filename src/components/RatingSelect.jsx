@@ -16,7 +16,7 @@ export default function RatingSelect({ rating, setRating }) {
         label="Rating"
         onChange={handleChangeRating}
       >
-        <MenuItem value={0}>Any</MenuItem>
+        <MenuItem value={""}>Any</MenuItem>
         <MenuItem value={1}>1</MenuItem>
         <MenuItem value={2}>2</MenuItem>
         <MenuItem value={3}>3</MenuItem>

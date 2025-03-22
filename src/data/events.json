@@ -140,13 +140,6 @@
     "types": ["classes", "social"]
   },
   {
-    "name": "Cumbaye Dance",
-    "location": "London",
-    "days": ["Saturday"],
-    "styles": ["salsa", "bachata"],
-    "types": ["classes", "social"]
-  },
-  {
     "name": "Salsa Mish",
     "location": "St Albans",
     "days": ["Friday"],

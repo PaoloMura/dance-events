@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Latin Shine",
+    "location": "High Wycombe",
+    "website": "https://www.latinshine.co.uk/",
+    "days": ["Tuesday"],
+    "styles": ["Salsa"],
+    "types": ["classes"]
+  },
+  {
+    "name": "Latin Shine",
+    "location": "High Wycombe",
+    "website": "https://www.latinshine.co.uk/",
+    "days": ["Wednesday"],
+    "styles": ["Bachata"],
+    "types": ["classes"]
+  },
+  {
+    "name": "SalsaStyle (Norman)",
+    "location": "Marlow",
+    "website": "https://www.salsastyle.co.uk/",
+    "days": ["Monday"],
+    "styles": ["Salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "SalsaStyle (Norman)",
+    "location": "Maidenhead",
+    "website": "https://www.salsastyle.co.uk/",
+    "days": ["Thursday"],
+    "styles": ["Salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "SalsaStyle (Norman)",
+    "location": "Marlow",
+    "website": "https://www.salsastyle.co.uk/",
+    "days": ["Friday"],
+    "styles": ["Salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "Pexava Dance (Gill)",
+    "location": "Ealing, London",
+    "website": "https://www.pexava.com/",
+    "days": ["Tuesday"],
+    "styles": ["Salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "A2B Bachata (Ash y Leni)",
+    "location": "Northolt, London",
+    "website": "https://www.instagram.com/a2b_dance_academy/",
+    "days": ["Tuesday", "Wednesday", "Thursday"],
+    "styles": ["Bachata"],
+    "types": ["classes"]
+  },
+  {
+    "name": "Salsa in Aylesbury",
+    "location": "Aylesbury",
+    "website": "https://www.salsainaylesbury.co.uk/",
+    "days": ["Thursday"],
+    "styles": ["Salsa"],
+    "types": ["classes", "social"]
+  },
+  {
+    "name": "The Funky Latino",
+    "location": "Beaconsfield",
+    "website": "https://thefunkylatino.com/",
+    "days": ["Saturday"],
+    "styles": ["Salsa", "Bachata"],
+    "types": ["classes", "social"]
+  }
+]

@@ -21,7 +21,7 @@ const allDays = [
   "Sunday",
 ];
 
-export default function Header({ days, setDays }) {
+export default function Header({ days, setDays, style, setStyle }) {
   const handleChangeDays = (event) => {
     const selectedDays = event.target.value;
     const selectDaysList =
@@ -29,15 +29,19 @@ export default function Header({ days, setDays }) {
     setDays(selectDaysList);
   };
 
+  const handleChangeStyle = (event) => {
+    setStyle(event.target.value);
+  };
+
   return (
     <>
       <AppBar>
         <Toolbar>
-          <FormControl sx={{ m: 1, minWidth: 120, zIndex: 100 }}>
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="days-label">Days</InputLabel>
             <Select
               labelId="days-label"
-              id="days-label"
+              id="days-select"
               value={days}
               label="Days"
               onChange={handleChangeDays}
@@ -51,6 +55,22 @@ export default function Header({ days, setDays }) {
                   <ListItemText primary={day} />
                 </MenuItem>
               ))}
+            </Select>
+          </FormControl>
+
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="style-label">Style</InputLabel>
+            <Select
+              labelId="style-label"
+              id="style-select"
+              value={style}
+              label="Style"
+              onChange={handleChangeStyle}
+            >
+              <MenuItem value="">Any</MenuItem>
+              <MenuItem value="Salsa">Salsa</MenuItem>
+              <MenuItem value="Bachata">Bachata</MenuItem>
+              <MenuItem value="Kizomba">Kizomba</MenuItem>
             </Select>
           </FormControl>
         </Toolbar>

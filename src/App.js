@@ -5,11 +5,12 @@ import React from "react";
 
 function App() {
   const [days, setDays] = React.useState([]);
+  const [style, setStyle] = React.useState("");
 
   return (
     <div>
-      <Header days={days} setDays={setDays} />
-      <EventList days={days} />
+      <Header days={days} setDays={setDays} style={style} setStyle={setStyle} />
+      <EventList days={days} style={style} />
     </div>
   );
 }

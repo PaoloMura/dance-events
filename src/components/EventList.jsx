@@ -17,10 +17,13 @@ import PlaceIcon from "@mui/icons-material/Place";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-export default function EventList({ days }) {
-  const filteredEvents = events.filter(
-    (event) => days.length === 0 || event.days.some((day) => days.includes(day))
-  );
+export default function EventList({ days, style }) {
+  const filteredEvents = events
+    .filter(
+      (event) =>
+        days.length === 0 || event.days.some((day) => days.includes(day))
+    )
+    .filter((event) => style === "" || event.styles.includes(style));
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>

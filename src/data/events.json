@@ -4,7 +4,7 @@
     "location": "High Wycombe",
     "website": "https://www.latinshine.co.uk/",
     "days": ["Tuesday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes"]
   },
   {
@@ -12,7 +12,7 @@
     "location": "High Wycombe",
     "website": "https://www.latinshine.co.uk/",
     "days": ["Wednesday"],
-    "styles": ["Bachata"],
+    "styles": ["bachata"],
     "types": ["classes"]
   },
   {
@@ -20,7 +20,7 @@
     "location": "Marlow",
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Monday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes", "social"]
   },
   {
@@ -28,7 +28,7 @@
     "location": "Maidenhead",
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Thursday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes", "social"]
   },
   {
@@ -36,7 +36,7 @@
     "location": "Marlow",
     "website": "https://www.salsastyle.co.uk/",
     "days": ["Friday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes", "social"]
   },
   {
@@ -44,7 +44,7 @@
     "location": "Ealing, London",
     "website": "https://www.pexava.com/",
     "days": ["Tuesday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes", "social"]
   },
   {
@@ -52,7 +52,7 @@
     "location": "Northolt, London",
     "website": "https://www.instagram.com/a2b_dance_academy/",
     "days": ["Tuesday", "Wednesday", "Thursday"],
-    "styles": ["Bachata"],
+    "styles": ["bachata"],
     "types": ["classes"]
   },
   {
@@ -60,7 +60,7 @@
     "location": "Aylesbury",
     "website": "https://www.salsainaylesbury.co.uk/",
     "days": ["Thursday"],
-    "styles": ["Salsa"],
+    "styles": ["salsa"],
     "types": ["classes", "social"]
   },
   {
@@ -68,7 +68,7 @@
     "location": "Beaconsfield",
     "website": "https://thefunkylatino.com/",
     "days": ["Saturday"],
-    "styles": ["Salsa", "Bachata"],
+    "styles": ["salsa", "bachata"],
     "types": ["classes", "social"]
   }
 ]

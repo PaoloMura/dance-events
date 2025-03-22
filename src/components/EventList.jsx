@@ -63,10 +63,10 @@ export default function EventList({ days, style, type }) {
               <ListItem>
                 <div style={{ display: "flex", gap: "0.5rem" }}>
                   {event?.styles.map((style, index) => (
-                    <Chip key={index} label={style} color="info" />
+                    <Chip key={index} label={style} color={style} />
                   ))}
                   {event?.types.map((type, index) => (
-                    <Chip key={index} label={type} color="warning" />
+                    <Chip key={index} label={type} color={type} />
                   ))}
                 </div>
               </ListItem>

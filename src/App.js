@@ -1,7 +1,8 @@
-import "./App.css";
+import { ThemeProvider } from "@mui/material";
 import EventList from "./components/EventList";
 import Header from "./components/Header";
 import React from "react";
+import { theme } from "./lib/theme";
 
 function App() {
   const [days, setDays] = React.useState([]);
@@ -9,7 +10,7 @@ function App() {
   const [type, setType] = React.useState("");
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Header
         days={days}
         setDays={setDays}
@@ -19,7 +20,7 @@ function App() {
         setType={setType}
       />
       <EventList days={days} style={style} type={type} />
-    </div>
+    </ThemeProvider>
   );
 }
 

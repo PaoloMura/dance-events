@@ -38,7 +38,8 @@ export default function EventList({ days, style, type, rating }) {
     .filter(
       (event) => type === "" || (event.types && event.types.includes(type))
     )
-    .filter((event) => rating === "" || (event.stars && event.stars >= rating));
+    .filter((event) => rating === "" || (event.stars && event.stars >= rating))
+    .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
@@ -131,12 +132,12 @@ export default function EventList({ days, style, type, rating }) {
           <DialogTitle id="event-dialog-title">
             {filteredEvents[selected].name}
           </DialogTitle>
-          <DialogContent>
-            <DialogContentText id="event-dialog-description">
-              {filteredEvents[selected]?.notes?.map((note, index) => (
-                <p key={index}>{note}</p>
-              ))}
-            </DialogContentText>
+          <DialogContent id="event-dialog-description">
+            {filteredEvents[selected]?.notes?.map((note, index) => (
+              <DialogContentText key={index} paddingY="0.5rem">
+                {note}
+              </DialogContentText>
+            ))}
           </DialogContent>
         </Dialog>
       )}

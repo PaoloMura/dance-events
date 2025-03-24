@@ -2,9 +2,14 @@ import React from "react";
 import events from "../data/events";
 import {
   Avatar,
+  Button,
   Card,
   Chip,
   Container,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
   IconButton,
   List,
   ListItem,
@@ -19,6 +24,8 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 export default function EventList({ days, style, type, rating }) {
+  const [selected, setSelected] = React.useState(null);
+
   const filteredEvents = events
     .filter(
       (event) =>
@@ -31,9 +38,7 @@ export default function EventList({ days, style, type, rating }) {
     .filter(
       (event) => type === "" || (event.types && event.types.includes(type))
     )
-    .filter(
-      (event) => rating === "" || (event.stars && event.stars >= rating)
-    );
+    .filter((event) => rating === "" || (event.stars && event.stars >= rating));
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
@@ -65,6 +70,7 @@ export default function EventList({ days, style, type, rating }) {
                   secondary={event.location || undefined}
                 />
               </ListItem>
+
               {event.days?.length && (
                 <ListItem>
                   <ListItemIcon>
@@ -73,11 +79,13 @@ export default function EventList({ days, style, type, rating }) {
                   <ListItemText>{event.days.join(", ")}</ListItemText>
                 </ListItem>
               )}
+
               {event.stars && (
                 <ListItem>
                   <Rating readOnly value={event.stars} />
                 </ListItem>
               )}
+
               <ListItem>
                 <div
                   style={{
@@ -95,10 +103,43 @@ export default function EventList({ days, style, type, rating }) {
                   ))}
                 </div>
               </ListItem>
+
+              {event.notes && (
+                <ListItem>
+                  <Button
+                    onClick={() => setSelected(index)}
+                    fullWidth
+                    sx={{ textTransform: "none" }}
+                  >
+                    <ListItemText>More info</ListItemText>
+                  </Button>
+                </ListItem>
+              )}
             </List>
           </Card>
         ))}
       </Stack>
+
+      {selected !== null && (
+        <Dialog
+          open={selected !== null}
+          onClose={() => setSelected(null)}
+          fullWidth
+          aria-labelledby="event-dialog-title"
+          aria-describedby="event-dialog-description"
+        >
+          <DialogTitle id="event-dialog-title">
+            {filteredEvents[selected].name}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="event-dialog-description">
+              {filteredEvents[selected]?.notes?.map((note, index) => (
+                <p key={index}>{note}</p>
+              ))}
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
+      )}
     </Container>
   );
 }

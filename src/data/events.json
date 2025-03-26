@@ -63,9 +63,7 @@
     "styles": ["salsa"],
     "types": ["classes", "social"],
     "stars": 5,
-    "notes": [
-      "Great teacher, technical, large class sizes."
-    ]
+    "notes": ["Great teacher, technical, large class sizes."]
   },
   {
     "name": "A2B Bachata (Ash y Leni)",
@@ -254,5 +252,38 @@
     "location": "Reading",
     "days": ["Friday"],
     "styles": ["salsa", "bachata"]
+  },
+  {
+    "name": "Julian Mr M & Ritmo Latino",
+    "location": "Soho, London",
+    "days": ["Tuesday"],
+    "styles": ["bachata"],
+    "types": ["classes", "social"],
+    "website": "https://www.julianmrm.com/",
+    "stars": 3,
+    "notes": [
+      "7pm - free class/warm up.",
+      "7:30-9:30pm - bachata classes.",
+      "9:30pm - social.",
+      "£15 for 2 classes.",
+      "4 levels of classes.",
+      "Very packed and busy."
+    ]
+  },
+  {
+    "name": "Bachata Exchange",
+    "days": ["Sunday"],
+    "location": "Liverpool Street, London",
+    "stars": 4,
+    "styles": ["bachata"],
+    "types": ["classes", "social"],
+    "website": "https://www.instagram.com/bachata.exchange",
+    "notes": [
+      "Free classes and social.",
+      "Closed during Winter.",
+      "Very packed and busy.",
+      "4 levels of classes.",
+      "Outdoors under covered roof."
+    ]
   }
 ]

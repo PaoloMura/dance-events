@@ -35,10 +35,10 @@ export const theme = createTheme({
       contrastText: offWhite,
     },
     social: {
-      main: "#02978b",
+      main: "#27a79c",
       light: "#02b9ad",
       dark: "#01746f",
-      contrastText: offWhite,
+      contrastText: "#000",
     },
   },
   breakpoints: {

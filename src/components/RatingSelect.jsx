@@ -3,7 +3,16 @@ import React from "react";
 
 export default function RatingSelect({ rating, setRating }) {
   const handleChangeRating = (event) => {
-    setRating(event.target.value);
+    const newRating = event.target.value;
+    setRating(newRating);
+
+    const searchParams = new URLSearchParams(window.location.search);
+    if (newRating === "") {
+      searchParams.delete("rating");
+    } else {
+      searchParams.set("rating", newRating);
+    }
+    window.history.replaceState(null, "", `?${searchParams.toString()}`);
   };
 
   return (

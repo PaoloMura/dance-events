@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const allDays = [
+export const allDays = [
   "Monday",
   "Tuesday",
   "Wednesday",
@@ -22,9 +22,17 @@ const allDays = [
 export default function DaysSelect({ days, setDays }) {
   const handleChangeDays = (event) => {
     const selectedDays = event.target.value;
-    const selectDaysList =
+    const selectedDaysList =
       typeof selectedDays === "string" ? selectedDays.split(",") : selectedDays;
-    setDays(selectDaysList);
+    setDays(selectedDaysList);
+
+    const searchParams = new URLSearchParams(window.location.search);
+    if (selectedDaysList.length > 0) {
+      searchParams.set("days", selectedDaysList.join(","));
+    } else {
+      searchParams.delete("days");
+    }
+    window.history.replaceState(null, "", `?${searchParams.toString()}`);
   };
 
   return (

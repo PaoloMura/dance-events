@@ -3,7 +3,16 @@ import React from "react";
 
 export default function StyleSelect({ style, setStyle }) {
   const handleChangeStyle = (event) => {
-    setStyle(event.target.value);
+    const newStyle = event.target.value;
+    setStyle(newStyle);
+
+    const searchParams = new URLSearchParams(window.location.search);
+    if (newStyle === "") {
+      searchParams.delete("style");
+    } else {
+      searchParams.set("style", newStyle);
+    }
+    window.history.replaceState(null, "", `?${searchParams.toString()}`);
   };
 
   return (

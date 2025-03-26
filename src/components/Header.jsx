@@ -12,6 +12,7 @@ import StyleSelect from "./StyleSelect";
 import TypeSelect from "./TypeSelect";
 import RatingSelect from "./RatingSelect";
 import TuneIcon from "@mui/icons-material/Tune";
+import ClearButton from "./ClearButton";
 
 export default function Header() {
   const [openFilters, setOpenFilters] = React.useState(false);
@@ -36,6 +37,7 @@ export default function Header() {
               <StyleSelect />
               <TypeSelect />
               <RatingSelect />
+              <ClearButton />
             </>
           )}
         </Toolbar>
@@ -57,6 +59,7 @@ export default function Header() {
         <StyleSelect />
         <TypeSelect />
         <RatingSelect />
+        <ClearButton />
       </Drawer>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import events from "../data/events";
 import {
   Avatar,
+  Box,
   Button,
   Card,
   Chip,
@@ -18,6 +19,7 @@ import {
   ListItemText,
   Rating,
   Stack,
+  Typography,
 } from "@mui/material";
 import PlaceIcon from "@mui/icons-material/Place";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -45,6 +47,12 @@ export default function EventList() {
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
+      <Box sx={{ marginY: 2 }}>
+        <Typography>
+          {filteredEvents.length} event{filteredEvents.length === 1 ? "" : "s"}{" "}
+          found
+        </Typography>
+      </Box>
       <Stack spacing={2}>
         {filteredEvents.map((event, index) => (
           <Card key={index}>

@@ -52,6 +52,14 @@ export function filtersReducer(filters, action) {
         ...filters,
         type,
       };
+    case "CLEAR":
+      window.history.replaceState(null, "", "?");
+      return {
+        days: [],
+        rating: "",
+        style: "",
+        type: "",
+      };
     default:
       return {
         ...filters,

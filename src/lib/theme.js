@@ -7,6 +7,9 @@ export const theme = createTheme({
     primary: {
       main: "#79010b",
     },
+    secondary: {
+      main: "#01796f",
+    },
     salsa: {
       main: "#650109",
       light: "#8e020d",

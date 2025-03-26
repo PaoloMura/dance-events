@@ -10,28 +10,10 @@ function getInitialDays(searchParams) {
   return [...new Set(days)];
 }
 
-function getInitialStyle(searchParams) {
-  const style = searchParams.get("style") || "";
-  if (["bachata", "salsa", "kizomba"].includes(style)) {
-    return style;
-  }
-
-  return "";
-}
-
-function getInitialType(searchParams) {
-  const type = searchParams.get("type") || "";
-  if (["classes", "social"].includes(type)) {
-    return type;
-  }
-
-  return "";
-}
-
-function getInitialRating(searchParams) {
-  const rating = searchParams.get("rating") || "";
-  if (["1", "2", "3", "4", "5"].includes(rating)) {
-    return rating;
+function getInitialValue(searchParams, key, validValues) {
+  const value = searchParams.get(key) || "";
+  if (validValues.includes(value)) {
+    return value;
   }
 
   return "";
@@ -40,8 +22,12 @@ function getInitialRating(searchParams) {
 export function initialiseFilters(searchParams) {
   return {
     days: getInitialDays(searchParams),
-    style: getInitialStyle(searchParams),
-    type: getInitialType(searchParams),
-    rating: getInitialRating(searchParams),
+    style: getInitialValue(searchParams, "style", [
+      "bachata",
+      "salsa",
+      "kizomba",
+    ]),
+    type: getInitialValue(searchParams, "type", ["classes", "social"]),
+    rating: getInitialValue(searchParams, "rating", ["1", "2", "3", "4", "5"]),
   };
 }

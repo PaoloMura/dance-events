@@ -148,7 +148,7 @@
     "days": ["Monday"],
     "styles": ["salsa"],
     "types": ["classes", "social"],
-    "notes": "highly recommended"
+    "notes": ["highly recommended"]
   },
   {
     "name": "Salsa4Fun (Super Mario)",
@@ -184,7 +184,7 @@
     "days": ["Friday"],
     "styles": ["salsa", "bachata", "kizomba"],
     "types": ["classes", "social"],
-    "notes": "highly recommended"
+    "notes": ["highly recommended"]
   },
   {
     "name": "Salsa Machine",
@@ -215,7 +215,7 @@
     "days": ["Saturday"],
     "styles": ["bachata"],
     "types": ["classes", "social"],
-    "notes": "mentioned many times, likely packed"
+    "notes": ["mentioned many times, likely packed"]
   },
   {
     "name": "LLB Mambo City",

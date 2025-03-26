@@ -2,7 +2,6 @@ import React from "react";
 import events from "../data/events";
 import {
   Avatar,
-  Box,
   Button,
   Card,
   Chip,
@@ -47,12 +46,10 @@ export default function EventList() {
 
   return (
     <Container maxWidth="sm" sx={{ paddingY: (theme) => theme.spacing(2) }}>
-      <Box sx={{ marginY: 2 }}>
-        <Typography>
-          {filteredEvents.length} event{filteredEvents.length === 1 ? "" : "s"}{" "}
-          found
-        </Typography>
-      </Box>
+      <Typography sx={{ mb: 2 }}>
+        {filteredEvents.length} event{filteredEvents.length === 1 ? "" : "s"}{" "}
+        found
+      </Typography>
       <Stack spacing={2}>
         {filteredEvents.map((event, index) => (
           <Card key={index}>

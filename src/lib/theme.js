@@ -41,6 +41,11 @@ export const theme = createTheme({
       contrastText: offWhite,
     },
   },
+  breakpoints: {
+    values: {
+      sm: 740,
+    },
+  },
   components: {
     MuiFormLabel: {
       styleOverrides: {

@@ -1,19 +1,9 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
+import { FiltersContext } from "../hooks/FiltersProvider";
 
-export default function RatingSelect({ rating, setRating }) {
-  const handleChangeRating = (event) => {
-    const newRating = event.target.value;
-    setRating(newRating);
-
-    const searchParams = new URLSearchParams(window.location.search);
-    if (newRating === "") {
-      searchParams.delete("rating");
-    } else {
-      searchParams.set("rating", newRating);
-    }
-    window.history.replaceState(null, "", `?${searchParams.toString()}`);
-  };
+export default function RatingSelect() {
+  const { rating, dispatch } = React.useContext(FiltersContext);
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -23,7 +13,9 @@ export default function RatingSelect({ rating, setRating }) {
         id="rating-select"
         value={rating}
         label="Rating"
-        onChange={handleChangeRating}
+        onChange={(event) =>
+          dispatch({ type: "SET_RATING", payload: event.target.value })
+        }
       >
         <MenuItem value={""}>Any</MenuItem>
         <MenuItem value={1}>1</MenuItem>

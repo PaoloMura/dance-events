@@ -1,19 +1,9 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
+import { FiltersContext } from "../hooks/FiltersProvider";
 
-export default function StyleSelect({ style, setStyle }) {
-  const handleChangeStyle = (event) => {
-    const newStyle = event.target.value;
-    setStyle(newStyle);
-
-    const searchParams = new URLSearchParams(window.location.search);
-    if (newStyle === "") {
-      searchParams.delete("style");
-    } else {
-      searchParams.set("style", newStyle);
-    }
-    window.history.replaceState(null, "", `?${searchParams.toString()}`);
-  };
+export default function StyleSelect() {
+  const { style, dispatch } = React.useContext(FiltersContext);
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -23,7 +13,9 @@ export default function StyleSelect({ style, setStyle }) {
         id="style-select"
         value={style}
         label="Style"
-        onChange={handleChangeStyle}
+        onChange={(event) =>
+          dispatch({ type: "SET_STYLE", payload: event.target.value })
+        }
       >
         <MenuItem value="">Any</MenuItem>
         <MenuItem value="salsa">Salsa</MenuItem>

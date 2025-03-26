@@ -22,8 +22,10 @@ import {
 import PlaceIcon from "@mui/icons-material/Place";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { FiltersContext } from "../hooks/FiltersProvider";
 
-export default function EventList({ days, style, type, rating }) {
+export default function EventList() {
+  const { days, style, type, rating } = React.useContext(FiltersContext);
   const [selected, setSelected] = React.useState(null);
 
   const filteredEvents = events

@@ -1,19 +1,9 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
+import { FiltersContext } from "../hooks/FiltersProvider";
 
-export default function TypeSelect({ type, setType }) {
-  const handleChangeType = (event) => {
-    const newType = event.target.value;
-    setType(newType);
-    
-    const searchParams = new URLSearchParams(window.location.search);
-    if (newType === "") {
-      searchParams.delete("type");
-    } else {
-      searchParams.set("type", newType);
-    }
-    window.history.replaceState(null, "", `?${searchParams.toString()}`);
-  };
+export default function TypeSelect() {
+  const { type, dispatch } = React.useContext(FiltersContext);
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -23,7 +13,9 @@ export default function TypeSelect({ type, setType }) {
         id="type-select"
         value={type}
         label="Type"
-        onChange={handleChangeType}
+        onChange={(event) =>
+          dispatch({ type: "SET_TYPE", payload: event.target.value })
+        }
       >
         <MenuItem value="">Any</MenuItem>
         <MenuItem value="classes">classes</MenuItem>

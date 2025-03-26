@@ -13,18 +13,8 @@ import TypeSelect from "./TypeSelect";
 import RatingSelect from "./RatingSelect";
 import TuneIcon from "@mui/icons-material/Tune";
 
-export default function Header({
-  days,
-  setDays,
-  style,
-  setStyle,
-  type,
-  setType,
-  rating,
-  setRating,
-}) {
+export default function Header() {
   const [openFilters, setOpenFilters] = React.useState(false);
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -42,10 +32,10 @@ export default function Header({
             </IconButton>
           ) : (
             <>
-              <DaysSelect days={days} setDays={setDays} />
-              <StyleSelect style={style} setStyle={setStyle} />
-              <TypeSelect type={type} setType={setType} />
-              <RatingSelect rating={rating} setRating={setRating} />
+              <DaysSelect />
+              <StyleSelect />
+              <TypeSelect />
+              <RatingSelect />
             </>
           )}
         </Toolbar>
@@ -59,14 +49,14 @@ export default function Header({
             sx: {
               width: "85%",
               backgroundColor: (theme) => theme.palette.grey[900],
-            }
+            },
           },
         }}
       >
-        <DaysSelect days={days} setDays={setDays} />
-        <StyleSelect style={style} setStyle={setStyle} />
-        <TypeSelect type={type} setType={setType} />
-        <RatingSelect rating={rating} setRating={setRating} />
+        <DaysSelect />
+        <StyleSelect />
+        <TypeSelect />
+        <RatingSelect />
       </Drawer>
     </>
   );

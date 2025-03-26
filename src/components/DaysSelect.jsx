@@ -8,32 +8,11 @@ import {
   Select,
 } from "@mui/material";
 import React from "react";
+import { allDays } from "../lib/constants";
+import { FiltersContext } from "../hooks/FiltersProvider";
 
-export const allDays = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
-export default function DaysSelect({ days, setDays }) {
-  const handleChangeDays = (event) => {
-    const selectedDays = event.target.value;
-    const selectedDaysList =
-      typeof selectedDays === "string" ? selectedDays.split(",") : selectedDays;
-    setDays(selectedDaysList);
-
-    const searchParams = new URLSearchParams(window.location.search);
-    if (selectedDaysList.length > 0) {
-      searchParams.set("days", selectedDaysList.join(","));
-    } else {
-      searchParams.delete("days");
-    }
-    window.history.replaceState(null, "", `?${searchParams.toString()}`);
-  };
+export default function DaysSelect() {
+  const { days, dispatch } = React.useContext(FiltersContext);
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -43,7 +22,9 @@ export default function DaysSelect({ days, setDays }) {
         id="days-select"
         value={days}
         label="Days"
-        onChange={handleChangeDays}
+        onChange={(event) =>
+          dispatch({ type: "SET_DAYS", payload: event.target.value })
+        }
         renderValue={(selected) => selected.join(", ")}
         multiple
         input={<OutlinedInput label="Days" />}

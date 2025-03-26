@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Button,
   Drawer,
   IconButton,
   Toolbar,
@@ -59,6 +60,13 @@ export default function Header() {
         <StyleSelect />
         <TypeSelect />
         <RatingSelect />
+        <Button
+          onClick={() => setOpenFilters(false)}
+          variant="contained"
+          sx={{ m: 1 }}
+        >
+          Ok
+        </Button>
         <ClearButton />
       </Drawer>
     </>

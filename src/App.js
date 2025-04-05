@@ -15,6 +15,10 @@ function App() {
     initialiseFilters
   );
 
+  React.useEffect(() => {
+    document.title = "Dance Events";
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <FiltersProvider filters={filters} dispatch={dispatch}>

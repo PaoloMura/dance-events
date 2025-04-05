@@ -206,8 +206,16 @@
   {
     "name": "Incognito Dance",
     "days": ["Saturday"],
-    "styles": ["salsa"],
-    "types": ["classes"]
+    "styles": ["salsa", "bachata"],
+    "types": ["classes"],
+    "stars": 4,
+    "location": "Hammersmith, London",
+    "website": "https://www.incognitodance.com/",
+    "notes": [
+      "3 hour workshop, once a month.",
+      "Either salsa or bachata.",
+      "Good fundamental technique."
+    ]
   },
   {
     "name": "BOS Bachata on Saturdays",

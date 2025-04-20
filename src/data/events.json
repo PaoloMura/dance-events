@@ -148,14 +148,15 @@
     "days": ["Monday"],
     "styles": ["salsa"],
     "types": ["classes", "social"],
-    "notes": ["highly recommended"]
+    "notes": ["highly recommended, particularly for leaders technique"]
   },
   {
     "name": "Salsa4Fun (Super Mario)",
     "location": "Camden Town, London",
     "days": ["Saturday"],
     "styles": ["salsa"],
-    "types": ["social"]
+    "types": ["social"],
+    "notes": ["highly recommended, particularly for leaders technique"]
   },
   {
     "name": "Salsa Tropical",
@@ -293,5 +294,50 @@
       "4 levels of classes.",
       "Outdoors under covered roof."
     ]
+  },
+  {
+    "name": "Bachata Kiss",
+    "days": ["Saturday"],
+    "location": "Central London",
+    "styles": ["bachata"],
+    "types": ["classes", "social"],
+    "website": "https://www.facebook.com/BachataKissOfficial/events",
+    "notes": [
+      "Third Saturday of every month.",
+      "7-9pm classes.",
+      "9pm-3am social."
+    ]
+  },
+  {
+    "name": "Carmelo Latin Dance",
+    "location": "Marylebone, London",
+    "website": "https://caramelolatindance.co.uk/",
+    "days": ["Wednesday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["classes"]
+  },
+  {
+    "name": "Carmelo Latin Dance",
+    "location": "Paddington, London",
+    "website": "https://caramelolatindance.co.uk/",
+    "days": ["Thursday"],
+    "styles": ["salsa", "bachata"],
+    "types": ["classes"]
+  },
+  {
+    "name": "MS Dance",
+    "location": "Ealing, London",
+    "website": "https://www.msdance.co.uk/",
+    "days": ["Monday", "Wednesday", "Thursday"],
+    "styles": ["salsa"],
+    "types": ["classes"]
+  },
+  {
+    "name": "MS Dance",
+    "location": "Ealing, London",
+    "website": "https://www.msdance.co.uk/",
+    "days": ["Wednesday"],
+    "styles": ["bachata"],
+    "types": ["classes"]
   }
 ]
